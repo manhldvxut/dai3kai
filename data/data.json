@@ -3,7 +3,7 @@
     "id": "01",
     "shopName": "shop 01",
     "logo": "",
-    "shopImg": "/img/sampl.jpg",
+    "shopImg": "/dai3kai/img/sampl.jpg",
     "items": [
       {
         "title": "Title 01",
@@ -16,7 +16,7 @@
     "id": "02",
     "shopName": "shop 02",
     "logo": "",
-    "shopImg": "/img/sampl.jpg",
+    "shopImg": "/dai3kai/img/sampl.jpg",
     "items": [
       {
         "title": "Title 02",
@@ -29,7 +29,7 @@
     "id": "03",
     "shopName": "shop 03",
     "logo": "",
-    "shopImg": "/img/sampl.jpg",
+    "shopImg": "/dai3kai/img/sampl.jpg",
     "items": [
       {
         "title": "Title 03",
@@ -42,7 +42,7 @@
     "id": "04",
     "shopName": "shop 04",
     "logo": "",
-    "shopImg": "/img/sampl.jpg",
+    "shopImg": "/dai3kai/img/sampl.jpg",
     "items": [
       {
         "title": "Title 04",
@@ -55,7 +55,7 @@
     "id": "05",
     "shopName": "shop 05",
     "logo": "",
-    "shopImg": "/img/sampl.jpg",
+    "shopImg": "/dai3kai/img/sampl.jpg",
     "items": [
       {
         "title": "Title 05",
@@ -68,7 +68,7 @@
     "id": "06",
     "shopName": "shop 06",
     "logo": "",
-    "shopImg": "/img/sampl.jpg",
+    "shopImg": "/dai3kai/img/sampl.jpg",
     "items": [
       {
         "title": "Title 06",
