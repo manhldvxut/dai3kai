@@ -25,11 +25,18 @@ function showData(data){
     },
 
     mounted:function(){
-
+ 
 
       return;
     },
     methods: {
+      plus () {
+        this.counter += 1
+      },
+      minus () {
+        if (this.counter === 0) return
+        this.counter -= 1
+      }
 
     },
     watch: {
@@ -39,22 +46,18 @@ function showData(data){
         document.body.style.overflow = this.active ? 'hidden' : ''
       },
 
-
     },
 
     created: function(){
 
     },
     computed: {
+      
       checkRouter: function() {
         this.CurrentPath = location.pathname
       },
 
-      counted: function(){
-        if(this.counter < 0) {
-          this.counter = 0;
-        }
-      }
+      
     },
   })
 }
