@@ -31,22 +31,19 @@
 
 <body>
 
-    <div id="app">
+    <div id="app" v-cloak>
         <div class="container">
-            <h2 class="text-center mb-5 pt-3">詳細ページ</h2>
-            <div class="row">
-                <div class="row">
-                    <div class="col-md-12" v-for ="(item, index) in itemList">
-                        <h2>{{item.shopName}}</h2>
-                        <div class="img-fluid">
-                            <img class="w-100" :src="item.shopImg" alt="">
-                        </div>
-                        <div v-for="(item2, index) in item.items">
-                            <h4>{{item2.title}}</h4>
-                            <h5>{{item2.price}}</h5>
-                            <p>{{item2.description}}</p>
-                        </div>
-                    </div>
+            <header>
+                <h1 v-if = " CurrentPath == '/'"> 勉強会第3回</h1>
+                <h2 v-else> 勉強会第3回</h1>
+            </header>
+
+
+            <div class="click-function">
+                <h3>Click　Function</h3>
+                <div @click="active = !active" :aria-pressed="active ? 'true' : 'false'">
+                    <p>ここにクリック</p>
+                    <p v-if="active == true">アイテム</p>
                 </div>
             </div>
         </div>
@@ -57,12 +54,15 @@
             max-width: 900px;
         }
     </style>
+    <!-- data -->
+    <script>
+        const data = '/data/data.json';
+  </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-    <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../assets/js/item.js"></script>
+    <script src="/js/data.js"></script>
 </body>
 
 </html>

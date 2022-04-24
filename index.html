@@ -31,11 +31,31 @@
 
 <body>
 
-    <div id="app">
+    <div id="app" v-cloak>
         <div class="container">
-            <h2 class="text-center mb-5 pt-3">勉強会第3回</h2>
+            <header>
+                <h1 class="text-center" v-if = " CurrentPath == '/'"> 勉強会第3回</h1>
+                <h2 class="text-center" v-else> 勉強会第3回</h1>
+            </header>
+
+
+            <div class="click-function">
+                <h3>Click　Function</h3>
+                <div @click="active = !active" :aria-pressed="active ? 'true' : 'false'" class="mb-4">
+                    <button>ここにクリック</button>
+                    <p v-if="active == true">アイテム</p>
+                </div>
+
+                <div class="d-flex">
+                    <p class="p-2"><button v-on:click="counter += 1">クリック　Up</button></p>
+                    <p class="p-2">{{ counter }}</p>
+                    <p class="p-2"><button v-on:click="counter -= 1">クリック　Down</button></p>
+                </div>
+
+
+            </div>
             <div class="row">
-                <div class="col-md-4 mb-5" v-for="(item, index) in itemList">
+                <div class="col-md-4 mb-5" v-for="(item, index) in data">
                     <a class="item" data-bs-toggle="modal" :href="[`#vueModal_${index}`]">
                         <div class="img-fluid">
                             <img class="w-100" :src="item.shopImg" alt="">
@@ -77,12 +97,15 @@
             max-width: 900px;
         }
     </style>
+    <!-- data -->
+    <script>
+
+  </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-    <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/assets/js/item.js"></script>
+    <script src="/js/data.js"></script>
 </body>
 
 </html>
